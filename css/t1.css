@@ -1,0 +1,12 @@
+body{margin: 0;padding:0;}
+.top{width:100%;height :100px;background:#F5F5F5;font-family: "微软雅黑";}
+.mainbody{width:100%;height:800px;background:white;}
+.footer{width:100%;height:50px;background: #ccc;font-family: "微软雅黑";}
+li{float:right;width:200px;line-height:100px;text-align: center; }
+.textname{font-size: 22px;margin-right:100px; }
+#fly{margin-right:500px; }
+.lin{font-size: 6px;width: 100px;}
+a{text-decoration: none;color: #8E8E8E;}
+img{margin-bottom:-2px; margin-right:10px;  }
+#name{margin-left: 400px;line-height: 50px;}
+#email{margin-left:100px;}
