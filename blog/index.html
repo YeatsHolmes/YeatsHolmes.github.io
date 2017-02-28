@@ -1,0 +1,162 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<title>myblog</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<div class="mainwraper">
+ <header id="t1">
+ 	<nav>
+ 	 <ul> 
+ 	    <li class="logo"><i class="fa fa-institution"></i>Garden</li>
+	    <li><a href=""></a></li>
+	 	<li><a href="#t3">个人简介</a></li>
+	 	<li><a href="#t2">技能</a></li>
+	 	<li><a href="#t1">home</a></li> 
+	 
+ 	 </ul>
+ 	</nav>
+ 	<div id="banner">
+ 	<div id="left"></div>
+ 		<div class="inner">
+ 			<h1>何锐</h1>
+ 			<p class="text">一名来自重庆邮电大学，对前端有着高度热情的大四学生</p>
+ 			<!-- <button>fuck off</button> -->
+ 			<div class="more">更多</div>
+ 			<i class="fa fa-angle-double-down fa-3x"></i>
+ 		</div>
+ 	</div>	
+ </header>
+ <!-- 头结束 -->
+<div id="content">
+<section class="green-section" id="t2">
+<div class="wraper">
+	<div>
+		<h2>技能</h2>
+		<div class="hr"></div>
+		<p class="text">个人已掌握的编程语言有JAVA，HTML，CSS，JS等</p>
+	</div>
+	<div class="icon-group">
+	<canvas id="canvas"></canvas>
+	    <span class="icon">JAVA</span>
+		<span class="icon">HTML</span>
+		<span class="icon">CSS</span>
+		<span class="icon">JS</span>
+	</div>
+	<div>
+		
+	</div>
+</div>	
+</section>
+<section class="gray-section">
+	
+</section>
+<section class="purple-section" id="t3">
+<div class="wraper">
+	<div class="heading-wraper">
+		<h2>个人简介</h2>
+		<div class="hr"></div>
+		<p class="text">
+		</p>		
+	</div>
+
+	<div class="card-group clear-float " >
+		<div class="card">
+		<h3>主修课程</h3>
+		<p>C语言程序设计、C++程序设计、JAVA程序设计、数据库原理及应用、数据结构、操作系统、算法分析与程序设计、多核编程与程序设计、运筹学、线性代数等</p>	
+		</div>	
+		<div class="card">
+		<h3>技能与证书</h3>
+		<p>
+		通过计算机计算机等级考试2级；通过CET4；
+		熟练使用Office软件包括word,Excel,PPT；
+		能熟练使用C语言、java等程序语言编写程序；
+        能熟练使用HTML+CSS配合JS进行网页设计和开发；
+		</p>	
+		</div>
+		<div class="card">
+		<h3>个人爱好</h3>
+		<p>
+		喜欢打羽毛球，喜欢锻炼身体等一些体育运动。
+		喜欢研究一些小程序，实现一些特定的功能，对AI特别感兴趣，也研究过五子棋的人机对战，实现开发了最简单的AI。
+		</p>	
+				</div>	
+		<div class="card">
+		<h3>开发经验</h3>
+		<p>参加达内时代科技集团有限公司重庆分公司和重庆邮电大学理学院联合的暑期JAVA和WEB前端的项目实践活动，在为期一个月的时间内，通过使用HTML，CSS，进行了网页动态多功能壁纸墙的制作，使用JAVA这门编程语言对我们童年经常玩的游戏坦克大战进行开发制作
+		</p>	
+		</div>
+		<div class="card">
+		<h3>个人作品</h3>
+		<p>同过学习开发出了简单的五子棋人机对战，同时制作了动态的有动画效果的时钟。</p>	
+		</div>	
+		<div class="card">
+		<h3>个人总结</h3>
+		<p>个人已掌握了HTML，CSS，JS的基础知识，对CANVAS和JQUERY有一定的了解，因为大学开过一些课程所以也具有一些JAVA，MYSQL的基础，同时在github上挂了一个简单的主页yeatsholmes.github.io/</p>	
+		</div>
+ 
+
+	</div>
+	
+	</div>
+</section>
+</div>
+
+<!-- 中结束 -->
+ <footer>
+ 	
+
+ </footer>
+ <!-- 尾结束 -->
+ </div>
+ <script type="text/javascript">
+ var canvas =document.getElementById("canvas");
+ var context= canvas.getContext("2d");
+ canvas.width=1080;
+ canvas.height=300;
+ var g=1;
+ var ball=[{color:"#D0743B",x:305,y:180,vy:0},{color:"#B57AD2",x:460,y:80,vy:0},{color:"#D35384",x:610,y:130,vy:0},{color:"#2AC538",x:770,y:20,vy:0}];
+ setInterval(balls,50);
+
+ /*function draw(col,x,y){
+ context.clearRect(0,0,1080,300);
+ context.fillStyle=col;
+ context.beginPath();
+ context.arc(x,y,5,0,2*Math.PI);
+ context.fill();
+ context.closePath();
+
+}*/
+
+function balls(){
+	//alert("sb");
+	
+	for(var i=0;i<ball.length;i++){
+	ball[i].y=ball[i].y+ball[i].vy
+	if(ball[i].y+5>300){
+		ball[i].y=295;
+	    ball[i].vy=-ball[i].vy;
+	}
+	if(ball[i].y+5<0){
+		ball[i].y=5;
+	    ball[i].vy=-ball[i].vy;
+	}
+     //draw(ball[i].color,ball[i].x,ball[i].y);
+ context.clearRect(300+150*(i),0,30,300);
+ context.fillStyle=ball[i].color;
+ context.beginPath();
+ context.arc(ball[i].x,ball[i].y,5,0,2*Math.PI);
+ context.fill();
+ context.closePath();
+ ball[i].vy=ball[i].vy+g;
+}
+ 
+}
+
+
+ </script>
+</body>
+</html>
